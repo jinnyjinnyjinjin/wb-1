@@ -1,6 +1,6 @@
 package com.example.layeredarchitecture.domain.item;
 
-import com.example.layeredarchitecture.infra.OptionRepository;
+import com.example.layeredarchitecture.infrastructure.OptionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

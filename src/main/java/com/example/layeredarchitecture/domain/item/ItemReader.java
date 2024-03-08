@@ -1,6 +1,6 @@
 package com.example.layeredarchitecture.domain.item;
 
-import com.example.layeredarchitecture.infra.ItemRepository;
+import com.example.layeredarchitecture.infrastructure.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;

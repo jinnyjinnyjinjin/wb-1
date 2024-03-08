@@ -1,6 +1,6 @@
 package com.example.layeredarchitecture.domain.user;
 
-import com.example.layeredarchitecture.infra.UserRepository;
+import com.example.layeredarchitecture.infrastructure.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
