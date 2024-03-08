@@ -1,4 +1,4 @@
-package com.example.layeredarchitecture.domain.item;
+package com.example.layeredarchitecture.domain.product;
 
 import com.example.layeredarchitecture.infrastructure.OptionRepository;
 import lombok.RequiredArgsConstructor;

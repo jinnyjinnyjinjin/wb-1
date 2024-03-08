@@ -1,6 +1,6 @@
-package com.example.layeredarchitecture.domain.item;
+package com.example.layeredarchitecture.domain.product;
 
-import com.example.layeredarchitecture.infrastructure.ItemRepository;
+import com.example.layeredarchitecture.infrastructure.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,10 +10,10 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 public class ItemReader {
 
-    private final ItemRepository itemRepository;
+    private final ProductRepository productRepository;
 
-    public Item readById(Long id) {
-        return itemRepository.findById(id)
+    public Product readById(Long id) {
+        return productRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("상품을 찾을 수 없습니다. itemId: " + id));
     }
 }

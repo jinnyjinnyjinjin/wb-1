@@ -1,4 +1,4 @@
-package com.example.layeredarchitecture.domain.item;
+package com.example.layeredarchitecture.domain.product;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -6,7 +6,7 @@ import lombok.Getter;
 @Getter
 @Entity
 @Table(name = "items")
-public class Item {
+public class Product {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

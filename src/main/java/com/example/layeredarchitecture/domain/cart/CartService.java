@@ -1,10 +1,10 @@
 package com.example.layeredarchitecture.domain.cart;
 
 import com.example.layeredarchitecture.application.service.cart.dto.CartItemDto;
-import com.example.layeredarchitecture.domain.item.ItemReader;
-import com.example.layeredarchitecture.domain.item.OptionReader;
-import com.example.layeredarchitecture.domain.item.Item;
-import com.example.layeredarchitecture.domain.item.Option;
+import com.example.layeredarchitecture.domain.product.ItemReader;
+import com.example.layeredarchitecture.domain.product.OptionReader;
+import com.example.layeredarchitecture.domain.product.Product;
+import com.example.layeredarchitecture.domain.product.Option;
 import com.example.layeredarchitecture.domain.user.User;
 import com.example.layeredarchitecture.domain.user.UserReader;
 import com.example.layeredarchitecture.infrastructure.CartItemRepository;
@@ -33,9 +33,9 @@ public class CartService {
                 .ifPresentOrElse(
                         cartItem -> cartItem.increaseQuantity(item.getQuantity()),
                         () -> {
-                            Item newItem = itemReader.readById(item.getItemId());
+                            Product product = itemReader.readById(item.getItemId());
                             Option option = optionReader.readById(item.getOptionId());
-                            CartItem cartItem = CartItem.create(cart, newItem, option, item.getQuantity());
+                            CartItem cartItem = CartItem.create(cart, product, option, item.getQuantity());
                             cartItemRepository.save(cartItem);
                             cart.addItem(cartItem);
                         }

@@ -1,7 +1,7 @@
 package com.example.layeredarchitecture.domain.cart;
 
-import com.example.layeredarchitecture.domain.item.Item;
-import com.example.layeredarchitecture.domain.item.Option;
+import com.example.layeredarchitecture.domain.product.Product;
+import com.example.layeredarchitecture.domain.product.Option;
 import jakarta.persistence.*;
 import lombok.Getter;
 
@@ -17,7 +17,7 @@ public class CartItem {
 	private Cart cart;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	private Item item;
+	private Product product;
 
 	private int quantity;
 
@@ -27,15 +27,15 @@ public class CartItem {
 	public CartItem() {
 	}
 
-	public CartItem(Cart cart, Item item, Option option, int quantity) {
+	public CartItem(Cart cart, Product product, Option option, int quantity) {
 		this.cart = cart;
-		this.item = item;
+		this.product = product;
 		this.option = option;
 		this.quantity += quantity;
 	}
 
-	public static CartItem create(Cart cart, Item item, Option option, int quantity) {
-		return new CartItem(cart, item, option, quantity);
+	public static CartItem create(Cart cart, Product product, Option option, int quantity) {
+		return new CartItem(cart, product, option, quantity);
 	}
 
 	public void increaseQuantity(int quantity) {
@@ -46,6 +46,6 @@ public class CartItem {
 	}
 
 	public boolean hasSameOptionItem(Long itemId, Long optionId) {
-		return this.item.getId().equals(itemId) && this.option.getId().equals(optionId);
+		return this.product.getId().equals(itemId) && this.option.getId().equals(optionId);
 	}
 }
