@@ -1,6 +1,6 @@
 package com.example.layeredarchitecture.infra;
 
-import com.example.layeredarchitecture.domain.cart.entity.Cart;
+import com.example.layeredarchitecture.domain.cart.Cart;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

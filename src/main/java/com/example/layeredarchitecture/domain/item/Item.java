@@ -1,4 +1,4 @@
-package com.example.layeredarchitecture.domain.item.entity;
+package com.example.layeredarchitecture.domain.item;
 
 import jakarta.persistence.*;
 import lombok.Getter;

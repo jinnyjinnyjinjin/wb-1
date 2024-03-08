@@ -1,12 +1,10 @@
 package com.example.layeredarchitecture.domain.cart;
 
 import com.example.layeredarchitecture.application.service.cart.dto.CartItemDto;
-import com.example.layeredarchitecture.domain.cart.entity.Cart;
-import com.example.layeredarchitecture.domain.cart.entity.CartItem;
 import com.example.layeredarchitecture.domain.item.ItemReader;
 import com.example.layeredarchitecture.domain.item.OptionReader;
-import com.example.layeredarchitecture.domain.item.entity.Item;
-import com.example.layeredarchitecture.domain.item.entity.Option;
+import com.example.layeredarchitecture.domain.item.Item;
+import com.example.layeredarchitecture.domain.item.Option;
 import com.example.layeredarchitecture.domain.user.User;
 import com.example.layeredarchitecture.domain.user.UserReader;
 import com.example.layeredarchitecture.infra.CartItemRepository;

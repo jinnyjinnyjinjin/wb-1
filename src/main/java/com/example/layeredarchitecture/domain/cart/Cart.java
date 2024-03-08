@@ -1,4 +1,4 @@
-package com.example.layeredarchitecture.domain.cart.entity;
+package com.example.layeredarchitecture.domain.cart;
 
 import com.example.layeredarchitecture.domain.user.User;
 import jakarta.persistence.*;

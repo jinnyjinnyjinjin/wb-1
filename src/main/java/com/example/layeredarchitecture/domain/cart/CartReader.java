@@ -1,6 +1,5 @@
 package com.example.layeredarchitecture.domain.cart;
 
-import com.example.layeredarchitecture.domain.cart.entity.Cart;
 import com.example.layeredarchitecture.infra.CartRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;

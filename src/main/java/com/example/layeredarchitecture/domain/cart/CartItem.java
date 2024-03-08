@@ -1,7 +1,7 @@
-package com.example.layeredarchitecture.domain.cart.entity;
+package com.example.layeredarchitecture.domain.cart;
 
-import com.example.layeredarchitecture.domain.item.entity.Item;
-import com.example.layeredarchitecture.domain.item.entity.Option;
+import com.example.layeredarchitecture.domain.item.Item;
+import com.example.layeredarchitecture.domain.item.Option;
 import jakarta.persistence.*;
 import lombok.Getter;
 
